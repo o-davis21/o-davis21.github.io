@@ -1,66 +1,99 @@
-body{ 
-    background-color: #585C87;
-} 
-
-nav ul {
-    width: 100%;
-    background-color: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 25px;
-    margin-left: 0px;
-    display: flex; 
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    justify-content: center; 
-    font-family:  'Roboto Mono';
+/* Reset styles for better cross-browser consistency */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-    margin-bottom: 20px;
+body { 
+  background-color: #1c4870;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for better readability */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    display: block;
-    padding: 10px;
+/* Navigation styles */
+.navbar {
+  background-color: #1c4870;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0%;
+  padding-top: 1%;
+  z-index: 1000;
+  font-family: 'Roboto Mono';
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-menu h1{
+  font-family: 'Roboto Mono';
+  color: #CCE6FC;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-left: 4%;
+  padding-top: 0.5%;
+}
+
+.navbar-menu li {
+  margin: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #CCE6FC;
 }
 
 nav ul li:not(:hover) a {
-    opacity: 0.4;
-  }
-
-nav ul li a:hover {
-    opacity: 1;
-    color: white;
-} 
-
-.logo h1{
-    background-color: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 30px;
-    margin-left: 30px;
-    display: flex; 
-    justify-content: left; 
-    font-family:  'Roboto Mono';
-    color: white;
+  opacity: 0.4;
 }
 
-.logo h2{
-    background-color: none;
-    padding: 0;
-    margin: 0;
-    margin-top: -100px;
-    margin-left: 30px;
-    display: flex; 
-    justify-content: left; 
-    font-family:  'Roboto Mono';
-    color: white;
+nav ul li a:hover {
+  opacity: 1;
+  color: #CCE6FC;
+} 
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .navbar-menu {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-menu li {
+      margin-bottom: 10px;
+  }
+
+  .navbar {
+      padding: 10px;
+  }
+
+  .welcome h1 {
+      font-size: 48px;
+  }
+
+  .welcome h2 {
+      font-size: 16px;
+      margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome h1 {
+      font-size: 36px;
+  }
+
+  .navbar {
+      padding: 5px;
+  }
 }
 
 #particles{
@@ -76,7 +109,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Poppins';
-    color: white;
+    color: #CCE6FC;
     position: relative;
     font-size: 100px;
 }
@@ -86,11 +119,11 @@ nav ul li a:hover {
     padding: 0;
     margin: 0;
     margin-top: -10px;
-    margin-left: 375px;
+    margin-left: 380px;
     display: flex; 
     justify-content: center; 
     font-family:  'Poppins';
-    color: white;
+    color: #9ed4ea;
     position: absolute;
 }
 #mouse-scroll {
@@ -207,22 +240,22 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Poppins';
-    color: white;
+    color: #CCE6FC;
     position: relative;
     font-size: 80px;
 }
 
-.rounded-box {
+.about-box {
     width: 60%;
     padding: 20px;
     background-color: none;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 4px solid #CCE6FC;
     margin-top: 15px;
     margin-left: 4%;
   }
 
-.rounded-box p{
+.about-box p{
     background-color: none;
     padding: 0;
     margin: 0;
@@ -230,7 +263,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Roboto Mono';
-    color: white;
+    color: #CCE6FC;
     font-size: 17px;
 }
 
@@ -240,7 +273,7 @@ nav ul li a:hover {
     padding: 20px;
     background-color: none;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 4px solid #CCE6FC;
     margin-top: -31.9%;
     margin-left: 70%;
     display: flex;
@@ -255,7 +288,7 @@ nav ul li a:hover {
     margin-top: 10px;
     display: inline;
     font-family:  'Poppins';
-    color: white;
+    color: #CCE6FC;
     font-size: 20px;
     position: absolute;
 }
@@ -269,13 +302,13 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Roboto Mono';
-    color: white;
+    color: #9ed4ea;
     font-size: 17px;
     position: absolute;
 }
 
 .line_one{
-    border: 2px solid white;
+    border: 2px solid #CCE6FC;
     width: 99%;
     margin-top: 45%;
     margin-left: -5%;
@@ -291,7 +324,7 @@ nav ul li a:hover {
     margin-top: 205px;
     display: inline;
     font-family:  'Poppins';
-    color: white;
+    color: #CCE6FC;
     font-size: 20px;
     position: absolute;
 }
@@ -307,7 +340,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Roboto Mono';
-    color: white;
+    color: #9ed4ea;
     font-size: 17px;
     position: absolute;
 }
@@ -329,7 +362,7 @@ nav ul li a:hover {
     margin-top: 400px;
     display: inline;
     font-family:  'Poppins';
-    color: white;
+    color: #CCE6FC;
     font-size: 20px;
     position: absolute;
 }
@@ -345,7 +378,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: center; 
     font-family:  'Roboto Mono';
-    color: white;
+    color: #9ed4ea;
     font-size: 17px;
     position: absolute;
 }
@@ -356,7 +389,7 @@ nav ul li a:hover {
     padding: 20px;
     background-color: none;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 4px solid #CCE6FC;
     margin-top: -110px;
     margin-left: 4%;
     position: relative;
@@ -370,7 +403,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: left; 
     font-family:  'Roboto Mono';
-    color: #C4D0DE;
+    color: #8fe599;
     font-size: 17px;
     position: absolute;
 }
@@ -384,7 +417,7 @@ nav ul li a:hover {
     display: flex; 
     justify-content: left; 
     font-family:  'Roboto Mono';
-    color: white;
+    color: #60bcdb;
     font-size: 15px;
 }
 
@@ -397,7 +430,162 @@ nav ul li a:hover {
     display: flex; 
     justify-content: left; 
     font-family:  'Roboto Mono';
-    color: #C4D0DE;
+    color: #8fe599;
     font-size: 17px;
     position: absolute;
+}
+
+.project-title h1{
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #CCE6FC;
+  position: relative;
+  font-size: 80px;
+  transform: translateY( 100%);
+}
+
+.archdiocese-box {
+  width: 40%;
+  border-radius: 15px;
+  border: 4px solid #CCE6FC;
+  transform: translate(142.6%, 40%);
+}
+
+.archdiocese-box img{
+  width: 100%;
+  height: 100%;
+}
+
+.archdiocese-box1 img{
+  object-fit: fill;
+}
+
+.archdiocese_text h1{
+  margin-top: 0;
+  margin-left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #CCE6FC;
+  font-size: 30px;
+  transform: translate(-16%, -540%);
+  color: #60bcdb;
+}
+
+.archdiocese_text h2{
+  margin-top: 0;
+  margin-left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #fd67f8;
+  font-size: 25px;
+  transform: translate(-7%, -670%);
+}
+
+.archdiocese_text h3{
+  margin-top: 0;
+  margin-left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #98ef76;
+  font-size: 20px;
+  transform: translate(-3%, -850%);
+}
+
+.website-box img{
+  width: 25%;
+  height: auto;
+  border: 4px solid #CCE6FC;
+  border-radius: 15px;
+  transform: translate(0%, 28%);
+}
+
+.lucid-box img{
+  width: 25%;
+  height: auto;
+  border: 4px solid #CCE6FC;
+  border-radius: 15px;
+  transform: translate(0%, -175%);
+}
+
+.vex-box img{
+  width: 25%;
+  height: auto;
+  border: 4px solid #CCE6FC;
+  border-radius: 15px;
+  transform: translate(0%, -75%);
+}
+
+.rune-box {
+  width: 30%;
+  border-radius: 15px;
+  border: 4px solid #CCE6FC;
+  transform: translate(10%, -100%);
+}
+
+.rune-box img{
+  width: 100%;
+  height: 100%;
+}
+
+.rune-box1 img{
+  object-fit: fill;
+}
+
+.rune_text h1{
+  margin-top: 0;
+  margin-left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #CCE6FC;
+  font-size: 30px;
+  transform: translate(7%, -2000%);
+  color: #60bcdb;
+}
+
+.rune_text h2{
+  margin-top: 0;
+  margin-left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #fd67f8;
+  font-size: 25px;
+  transform: translate(6.7%, -2000%);
+}
+
+.rune_text h3{
+  top: 0;
+  left: 0;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  font-family:  'Poppins';
+  color: #98ef76;
+  font-size: 20px;
+  transform: translate(7.6%, -2000%);
 }
